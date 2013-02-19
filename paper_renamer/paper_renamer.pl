@@ -2,12 +2,13 @@
 use strict;
 use warnings;
 
-if ($#ARGV == -1) {
+if ($#ARGV != 0) {
 	print "\npaper_renamer: interactively (based on best guess) rename academic papers\n";
 	print "\nUsage: paper_renamer.pl <foldername>\n\n";
 	exit;
 }
 
+die "Couldn't access file $ARGV[0]!" if not -e $ARGV[0];
 recursive($ARGV[0]);
 
 sub recursive {
