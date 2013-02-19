@@ -2,9 +2,6 @@
 use strict;
 use warnings;
 
-#use CAM::PDF;
-#use CAM::PDF::PageText;
-
 if ($#ARGV == -1) {
 	print "\npaper_renamer: interactively (based on best guess) rename academic papers\n";
 	print "\nUsage: paper_renamer.pl <foldername>\n\n";
@@ -24,7 +21,7 @@ sub recursive {
 		chdir '..';
 	}
 	else {
-		if ($name =~ m/.*\.pdf/) {
+		if (`file \"$name\"` =~ m/PDF document, version/) {
 			fix($name);
 		}
 	}
