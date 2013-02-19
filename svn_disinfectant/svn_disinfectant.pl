@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-if ($#ARGV == -1) {
+if ($#ARGV != 0) {
 	print "\nsvn_disinfectant: recursively removes every .svn folder and its contents\n";
 	print "\nUsage: svn_disinfectant.pl <foldername>\n\n";
 	exit;
