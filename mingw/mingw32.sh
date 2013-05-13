@@ -9,7 +9,7 @@
 # to the executable
 
 VERSION="2.0.7"
-#wget "http://switch.dl.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$VERSION.tar.gz"
+wget "http://switch.dl.sourceforge.net/project/mingw-w64/mingw-w64/mingw-w64-release/mingw-w64-v$VERSION.tar.gz"
 tar xf mingw-w64-v$VERSION.tar.gz
 cd mingw-w64-v$VERSION
 
